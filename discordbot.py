@@ -18,4 +18,8 @@ async def neko(ctx):
     await ctx.send('にゃーん')
 
 
+@bot.command()
+async def &こんにちは(ctx):
+    await ctx.send('にゃーん')
+
 bot.run(token)
