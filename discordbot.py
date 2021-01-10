@@ -22,4 +22,11 @@ async def neko(ctx):
 async def hello(ctx):
     await ctx.send('にゃーん')
 
+@client.event
+async def on_message(message):
+    if message.content.startswith("こんにちは"):
+        if client.user != message.author:
+            msg = "こんにちは " + message.author.name + "さん！"
+            await client.send_message(message.channel, msg)
+
 bot.run(token)
